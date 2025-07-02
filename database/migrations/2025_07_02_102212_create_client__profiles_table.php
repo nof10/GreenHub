@@ -14,6 +14,12 @@ return new class extends Migration
         Schema::create('client__profiles', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->unsignedBigInteger('client_id')->unique();
+            $table->string('name')->nullable();
+            $table->string('email')->unique();
+            $table->string('city')->nullable();
+           
+
         });
     }
 
