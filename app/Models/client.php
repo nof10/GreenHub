@@ -17,8 +17,6 @@ class client extends Authenticatable
      */
     protected $fillable = [
         'name',
-        'email',
-        'password',
         'phone',
         'status',
         'favorit_distnation',
@@ -31,6 +29,6 @@ class client extends Authenticatable
      * @var list<string>
      */
     protected $hidden = [
-        'password'
+        
     ];
 }
