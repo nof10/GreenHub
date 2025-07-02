@@ -13,14 +13,16 @@ return new class extends Migration
     {
         Schema::create('drive__profiles', function (Blueprint $table) {
             $table->id();
-             $table->unsignedBigInteger('driver_id')->unique();
-            $table->name();
-            $table->email()->unique();
-            $table->gender();
-            $table->city();
-            $table->birth_date();
-            $table->national_ID()->unique();
-            $table->documents();
+            $table->unsignedBigInteger('driver_id')->unique();
+            $table->string('name')->nullable();
+            $table->string('email')->unique();
+            $table->string('gender');
+            $table->string('city');
+            $table->date('birth_date');
+            $table->string('national_ID')->unique();
+            $table->string('documents');
+        
+        
         });
     }
 

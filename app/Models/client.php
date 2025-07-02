@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class client extends Authenticatable
+class Client extends Authenticatable
 {
         /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
@@ -18,8 +18,6 @@ class client extends Authenticatable
     protected $fillable = [
         'name',
         'phone',
-        'status',
-        'favorit_distnation',
         'city',
     ];
 
