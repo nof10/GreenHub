@@ -7,7 +7,7 @@ use App\Models\Client;
 use App\Models\Driver;
 use App\Services\SmsService;
 
-class appController extends Controller
+class AppController extends Controller
 {
     public function sendVerificationCode(Request $request)
     {
