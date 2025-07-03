@@ -12,12 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('client__profiles', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->unsignedBigInteger('client_id')->unique();
             $table->string('name')->nullable();
             $table->string('email')->unique();
             $table->string('city')->nullable();
+           
             $table->string('phone', 10)->unique();
 
         });
