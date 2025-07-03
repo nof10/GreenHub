@@ -16,6 +16,8 @@ class Drive_Profile extends Model
         "city",
         "birth_date",
        "national_ID"
+        "phone",
+    
 
     ];
  
