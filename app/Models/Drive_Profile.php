@@ -15,8 +15,7 @@ class Drive_Profile extends Model
         "gender",
         "city",
         "birth_date",
-       "national_ID",
-        "phone"
+       "national_ID"
 
     ];
  
