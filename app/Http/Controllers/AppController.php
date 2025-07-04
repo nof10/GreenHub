@@ -6,8 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use App\Models\Client;
 use App\Models\Driver;
-use App\Services\SmsService;
-
+///home/u295987876/domains/sa-fvs.com/public_html/gh/app/Http/Controllers/AppController
 class AppController extends Controller
 {
     //
@@ -21,11 +20,13 @@ class AppController extends Controller
         $code = rand(1000, 9999);
         $key = $request->type . '_' . $request->phone;
 
-        Cache::put($key, $code, now()->addMinutes(3));
+        Cache::put($key, $code, now()->addMinutes(5));
 
-        SmsService::send($request->phone, "رمز التحقق الخاص بك هو: $code");
+        // SmsService::send($request->phone, "رمز التحقق الخاص بك هو: $code");
 
-        return response()->json(['message' => 'تم إرسال رمز التحقق بنجاح']);
+        return response()->json(['message' => 'تم إرسال رمز التحقق بنجاح',
+                'code' => $code
+    ]);
     }
 
     public function verifyCode(Request $request)

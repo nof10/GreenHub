@@ -15,11 +15,9 @@ return new class extends Migration
 
            $table->id();
             $table->string('face_id')->unique();
-            $table->string('national_id')->unique();
             $table->string('national_id',10)->unique();
             $table->unsignedBigInteger('vehical_id')->unique();
             $table->string('name');
-            $table->string('phone')->unique();
             $table->string('phone', 10)->unique();
             $table->string('gender');
             $table->string('email')->unique();
